@@ -1,0 +1,51 @@
+.dropdown a img
+{
+    height:50px;
+    width:50px;
+}
+
+.off
+{
+    padding-right:8% !important;
+}
+.name
+{
+    display: inline;
+}
+#smallpos
+{
+    position: absolute;
+    top:5px;
+    right:5px;
+}
+
+
+#navbarSupportedContent
+{width:220px;} 
+#navbarSupportedContentsecond
+    {
+        width:240px
+    }
+
+.app{
+    border: 2px solid orange !important; 
+    border-radius: 20px !important;
+    color: orange !important;
+  }
+  
+@media only screen and (max-width:992px){
+    .off{
+    padding-right:1% !important;
+}
+}
+
+@media only screen and (max-width:768px){
+    #navbarSupportedContentsecond
+    {
+        flex-direction: column !important;
+    }
+    .drop{
+        transform: unset !important;
+        position: static !important;
+    }
+}

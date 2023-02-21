@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- main page for grid and list view -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list-grid-runn</title>
+  <link rel="stylesheet" href="platfromlanding.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm border-bottom">
+    <div class="container-fluid mx-auto">
+
+      <button class="navbar-toggler" type="button" role="checkbox" data-bs-toggle="offcanvas"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+
+      <div class="offcanvas offcanvas-start" id="navbarSupportedContent" tabindex="-1">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Stories</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Policy
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Insuarance</a></li>
+              <li><a class="dropdown-item" href="#">Driving</a></li>
+              <li><a class="dropdown-item" href="#">data</a></li>
+              <li><a class="dropdown-item" href="#">Portfolio</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Explore
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Insuarance</a></li>
+              <li><a class="dropdown-item" href="#">Driving</a></li>
+              <li><a class="dropdown-item" href="#">data</a></li>
+              <li><a class="dropdown-item" href="#">Portfolio</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+
+      </div>
+    </div>
+  </nav>
+  <div class="dropdown mx-5 mr-sm-auto" id="smallpos">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="Assets\user-img.png" alt="" class=" rounded-circle w-30">
+      <p class="name" id="hide"> Evan Donohue</p>
+    </a>
+    <ul class="dropdown-menu" id="profile-drop">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+  <div class="container-fluid mt-2 border-bottom">
+
+    <div class="row ms-5 navbar-expand-md ">
+      <div class="col-10 col-md-4 d-flex" role="search">
+        <img src="Assets\search.png" alt="search icon" class="position-absolute pt-2">
+        <input class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
+      </div>
+      <div class="offcanvas offcanvas-start d-flex flex-row col-md-8" id="navbarSupportedContentsecond" tabindex="-1">
+        <div class="col-md-2  text-center border-end offset-md-0 offset-lg-2 off ">
+          <li class="list-group-item dropdown border-0 pt-3 pb-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Country
+            </a>
+            <ul class="dropdown-menu drop">
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value="India"
+                  id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  INdia
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value="Russia"
+                  id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Russia
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox"  value="England"
+                  id="flexCheckDefault2">
+                <label class="form-check-label" for="flexCheckDefault">
+                  England
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" name="vehicle" onClick="checkbox();" value="Finland"
+                  id="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Finland
+                         </label>
+              </div>
+            </ul>
+          </li>
+        </div>
+        <div class="col-md-2 text-center border-end">
+          <li class="list-group-item dropdown border-0 pt-3 pb-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              City
+            </a>
+            <ul class="dropdown-menu drop">
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value="Ahmedabad"
+                  id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Ahmedabad
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value=" banaras"
+                  id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault">
+                  banaras
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox"  value="Vadodara"
+                  id="flexCheckDefault2">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Vadodara
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" name="vehicle" onClick="checkbox();" value=" Mumbai"
+                  id="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Mumbai
+                </label>
+              </div>
+            </ul>
+          </li>
+        </div>
+        <div class="col-md-2  text-center border-end">
+          <li class="list-group-item dropdown border-0 pt-3 pb-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Theme
+            </a>
+            <ul class="dropdown-menu drop">
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value="Enviornment"
+                  id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Enviornment
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" value="Nutrients"
+                  id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Nutrients
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox"  value="Health"
+                  id="flexCheckDefault2">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Health
+                         </label>
+              </div>
+              <div class="form-check ms-3">
+                <input class="form-check-input checkbox" type="checkbox" name="vehicle" onClick="checkbox();" value="Children"
+                  id="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Children
+                         </label>
+              </div>
+            </ul>
+          </li>
+        </div>
+        <div class="col-md-2 text-center border-end">
+          <li class="list-group-item dropdown border-0 pt-3 pb-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Skills
+            </a>
+            <ul class="dropdown-menu drop">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </div>
+      </div>
+      <button class="navbar-toggler  col-1 " type="button" role="checkbox" data-bs-toggle="offcanvas"
+        data-bs-target="#navbarSupportedContentsecond" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <img src="D:\Tatvasoft_projects\CIA_design\Assets\filter.png" alt="">
+      </button>
+    </div>
+  </div>
+  <!--active tags -->
+  <div class="filters-section d-flex align-items-center flex-wrap justify-content-start">
+
+  </div>
+  <!-- <div class="d-flex justify-content-start mx-5 mt-3">
+    <div class=" border rounded-pill p-2" id="filter-1"><input class="border-0" type="text" id="show" name="vehicle"><button class="btn" onclick="hide()"><i class="bi bi-x"></i></button></div>
+    <div class=" border rounded-pill p-2" id="filter-2"><input class="border-0" type="text" id="show" name="vehicle"><button class="btn" onclick="hide()"><i class="bi bi-x"></i></button></div>
+    <div class=" border rounded-pill p-2" id="filter-3"><input class="border-0" type="text" id="show" name="vehicle"><button class="btn" onclick="hide()"><i class="bi bi-x"></i></button></div>
+    <div class=" border rounded-pill p-2" id="filter-4"><input class="border-0" type="text" id="show" name="vehicle"><button class="btn" onclick="hide()"><i class="bi bi-x"></i></button></div>
+  </div> -->
+  <!--active tags-->
+  <div class="d-flex mt-4 mx-5 justify-content-between" id="grid-list">
+    <h3 class="ms-3">Explore 72 missions</h3>
+    <div class="d-flex mx-3">
+      <select class="form-select mx-2 pe-5" aria-label="Default select example">
+        <option selected>Sort by</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <button class="btn border-0  btn-grid"><img src="Assets/grid.png" alt=""></button>
+      <button class="btn border-0 btn-list"><img src="Assets/list.png" alt=""></button>
+    </div>
+  </div>
+
+  </div>
+  <div class="px-4 px-lg-5 mt-5 grid-container">
+    <div class="row gx-4 justify-content-center">
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top resize_img"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <!-- <div class="rounded-pill tag mx-auto px-3">Enviornment</div> -->
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2 rating">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+
+                <div class="star">
+                  <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required"
+                    style="display: none;">
+                  <span class="selected-rating" style="display: none;">0</span>
+                  <button type="button" class="btn  btn-lg p-0" data-attr="1" id="rating-star-1">
+                    <i class="bi bi-star btnrating btn-default"></i>
+                  </button>
+                  <button type="button" class="btnrating btn btn-default btn-lg p-0" data-attr="2" id="rating-star-2">
+                    <i class="bi bi-star"></i>
+                  </button>
+                  <button type="button" class="btnrating btn btn-default btn-lg p-0" data-attr="3" id="rating-star-3">
+                    <i class="bi bi-star"></i>
+                  </button>
+                  <button type="button" class="btnrating btn btn-default btn-lg p-0" data-attr="4" id="rating-star-4">
+                    <i class="bi bi-star"></i>
+                  </button>
+                  <button type="button" class="btnrating btn btn-default btn-lg p-0" data-attr="5" id="rating-star-5">
+                    <i class="bi bi-star"></i>
+                  </button>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                                    width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex my-2">
+              <button class="btn mx-auto app">Apply <img
+                  src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                  alt="" class="ms-2"></button>
+            </div>
+          </div>
+          <!-- Product actions-->
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+                <div class="star">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                                  width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="d-flex my-2">
+            <button class="btn mx-auto app">Apply <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                alt="" class="ms-2"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+                <div class="star">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                                width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="d-flex my-2">
+            <button class="btn mx-auto app">Apply <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                alt="" class="ms-2"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+                <div class="star">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                              width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="d-flex my-2">
+            <button class="btn mx-auto app">Apply <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                alt="" class="ms-2"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+                <div class="star">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                            width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="d-flex my-2">
+            <button class="btn mx-auto app">Apply <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                alt="" class="ms-2"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card">
+          <!-- Sale badge-->
+
+          <!-- Product image-->
+          <div style="position:relative">
+            <img class="card-img-top"
+              src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\grid_img1.png"
+              alt="..." />
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="top: 0.5rem; right: 0.5rem"><i
+                class="bi bi-geo-alt"></i>Toronto</div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 4rem">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+            <div class="badge bg-dark text-white position-absolute opacity-50" style="right: 0.5rem; bottom: 1rem;">
+              <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\heart1.png"
+                alt="">
+            </div>
+          </div>
+          <!-- Tag-->
+
+          <div class="rounded-pill tag mx-auto px-3">Enviornment</div>
+          <!-- Product details-->
+          <div class="card-body  py-3 px-3 pb-0 card_img_mis">
+            <div class="text-start">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Grow Trees - On the path to environment sustainability</h5>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nam
+
+              <!-- Product reviews-->
+              <div class="d-flex mt-2 justify-content-between small text-warning mb-2">
+                <div>
+                  <span>Tree Canada</span>
+                </div>
+                <div class="star">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+
+              </div>
+              <!-- example -->
+
+              <!-- Product price-->
+              <div class=" border rounded-pill mx-auto px-3 date" style="border: 1px solid grey">from 10/01/2011 until
+                12/03/2011</div>
+              <div class="d-flex border-bottom  justify-content-between py-3">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center new-items d-none">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center new-items d-none">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\Seats-left.png">
+                  <div class="ms-3">
+                    <h5 class="mb-0" style="font-size: 15px;">10</h5>
+                    <p class="fs--1 mb-0 mt-0">seats left</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\hours.png"
+                    style="    height: 25px;
+                          width: 25px;">
+                  <div class="ms-3">
+                    <h5 class="mb-0 mt-0" style="font-size: 15px;">09/10/2011</h5>
+                    <p class="fs--1 mb-0 mt-0">Deadline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="d-flex my-2">
+            <button class="btn mx-auto app">Apply <img
+                src="C:\Users\ABHISHEK\Downloads\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\assets\right-arrow.png"
+                alt="" class="ms-2"></button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+  <script src="platfromlanding.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

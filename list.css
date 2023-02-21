@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+}
+.imgclass{
+    max-width: 300px;
+}
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.row1
+{
+    display: flex;
+}
+.imgtxt{
+
+    display:flex;
+}
+.marginleftc{
+    margin-left: 8%;
+}
+.marginstar{
+    align-items: flex-end;
+}
