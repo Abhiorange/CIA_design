@@ -1,3 +1,29 @@
+.pill{
+  width: fit-content;
+  z-index: 11;
+  background-color: white;
+}
+
+#progress{
+  width: 500%;
+}
+
+#hr{
+  position: relative;
+  bottom: 2rem;
+}
+.stardiv{
+  background-color: white;
+  width: fit-content;
+  margin: 0 auto;
+
+  z-index: 11;
+}
+
+#starLine{
+  position: relative;
+  bottom: 1.6rem;
+}
 .filter-list {
     /* / padding:6px 10px; / */
     background-color: white;
