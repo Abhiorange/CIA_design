@@ -1,3 +1,138 @@
+/* middle component css */
+.underline_hover:hover {
+  border-bottom: 2px solid black;
+}
+.mar_left
+{
+  margin-left: 6%;
+}
+.img_size
+{
+  width:50px;
+  height:50px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+{
+  border-top:0 !important;
+  border-left: 0 !important; 
+  border-right: 0 !important;
+  border-bottom: 2px solid black !important;
+}
+
+
+/* slideview css */
+.swiper {
+  width: auto;
+  margin: auto
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next
+{
+  left: var(--swiper-navigation-sides-offset,10px);
+  right: auto;
+  top: 34%;
+  /* bottom: -8%; */
+  width: 10%;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev
+{
+  right: var(--swiper-navigation-sides-offset,10px);
+  left: auto;
+  top: 41%;
+  width: 6%;
+}
+/* slideview css */
+.pos{
+  position:relative;
+}
+.pos-1
+{
+  position: absolute;
+}
+
+
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+ .loaw {
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+} 
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+ bottom: 0%;
+
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+} 
+
+
+
+ .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+} 
+
+/* Add a transparency effect for thumnbail images */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pill{
   width: fit-content;
   z-index: 11;
@@ -120,6 +255,17 @@ height:57%;
  
   top: -12px;
  }
+
+
+
+
+
+
+
+
+
+
+ /* grid images css */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
